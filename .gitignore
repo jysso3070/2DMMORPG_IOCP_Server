@@ -2,6 +2,10 @@
 /2D_client/x64
 /iocp_Server/x64
 /iocp_Server/Release
+*x64
+*x64
+*x64
+*Release
 *.exe
 *.ilk
 *.pdb
