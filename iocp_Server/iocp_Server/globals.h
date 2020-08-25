@@ -63,7 +63,7 @@ struct EVENT
 #define start_posY	69
 
 static default_random_engine dre;
-static uniform_int_distribution<> uidall(0, 800);
+static uniform_int_distribution<> uidall(0, 799);
 static uniform_int_distribution<> uidx_1(310, 470);
 static uniform_int_distribution<> uidy_1(1, 55);
 static uniform_int_distribution<> uidx_2(1, 280);

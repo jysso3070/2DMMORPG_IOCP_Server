@@ -21,17 +21,17 @@ void ServerMain::initServer()
 	loadMap();
 	initNPC();
 	initSocket();
+
+	m_iocp_handle = CreateIoCompletionPort(INVALID_HANDLE_VALUE, NULL, NULL, 0);
+	m_new_client_id = 0;
+	DBCount = 0;
+	
 	m_DBManager = new DatabaseManager;
 	if (use_DB == true) {
 		m_DBManager->sql_load_database();
 		DBCount = m_DBManager->vec_database.size();
 		cout <<"DB length: " <<DBCount << endl;
 	}
-
-	m_iocp_handle = CreateIoCompletionPort(INVALID_HANDLE_VALUE, NULL, NULL, 0);
-	m_new_client_id = 0;
-	DBCount = 0;
-	
 
 
 	initThread();
